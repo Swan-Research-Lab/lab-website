@@ -12,7 +12,7 @@ import { ContactPage } from './routes/Contact.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <Routes>
         <Route element={<App />}>
           <Route index element={<HomePage />} />

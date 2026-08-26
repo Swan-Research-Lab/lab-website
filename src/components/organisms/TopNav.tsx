@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { Logo } from '../atoms/Logo';
 import { Button } from '../atoms/Button';
@@ -34,12 +35,12 @@ export function TopNav() {
         className="max-w-[1200px] mx-auto h-16 px-6 flex items-center justify-between"
         aria-label="Main navigation"
       >
-        <a href="/" className="flex items-center gap-3 no-underline">
+        <Link to="/" className="flex items-center gap-3 no-underline">
           <Logo />
           <span className="font-body text-[16px] font-medium text-ink tracking-wide">
             SWAN Research Lab
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
           {navItems.map((item) => (

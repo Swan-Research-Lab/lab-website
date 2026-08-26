@@ -24,9 +24,10 @@ export function Avatar({ name, src, size = 'md', className = '' }: AvatarProps) 
   const sizeClass = sizeClasses[size];
 
   if (src) {
+    const resolvedSrc = `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`;
     return (
       <img
-        src={src}
+        src={resolvedSrc}
         alt={`Photo of ${name}`}
         className={`rounded-full object-cover ${sizeClass} ${className}`}
       />

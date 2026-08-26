@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { HeroBand } from '../components/organisms/HeroBand';
 import { GradientOrbCard } from '../components/organisms/GradientOrbCard';
 import { CtaBand } from '../components/organisms/CtaBand';
@@ -76,12 +77,12 @@ export function HomePage() {
             <Display as="h2" size="lg">
               Recent News
             </Display>
-            <a
-              href="/news"
+            <Link
+              to="/news"
               className="font-body text-[15px] font-medium text-accent hover:text-ink no-underline transition-colors duration-150"
             >
               View all news &rarr;
-            </a>
+            </Link>
           </div>
           <motion.div
             className="bg-surface-card rounded-xl border border-hairline p-6"
